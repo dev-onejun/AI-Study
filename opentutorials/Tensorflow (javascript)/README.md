@@ -21,7 +21,7 @@
 
 ## 2021-03-06
 ### Opentutorials
-#### '지도학습의 작업순서' ~ ''
+#### '지도학습의 작업순서' ~ 'deeplearning: course 1'
 * Tensorflow-vis
     - model이 만들어지는 과정을 시각화한 도구
     
