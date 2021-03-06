@@ -5,6 +5,7 @@ image:
 tasks:
   - name: yarn
   - name: npm
+  - name: node
   - name: git
 # Ports to expose on workspace startup (optional)
 ports:
