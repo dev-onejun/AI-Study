@@ -1,5 +1,6 @@
 # AI Study
-* using colab ???
+* [Colabolatory](https://research.google.com/colaboratory)
+* [Kaggle](https://www.kaggle.com)
 ## References
 1) How to install tensorflow
     - It is recommended that using docker, because tensorflow uses specific CPU instruction(ex. AVX)
