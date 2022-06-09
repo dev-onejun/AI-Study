@@ -1,7 +1,12 @@
 # AI Study
 * [Colabolatory](https://research.google.com/colaboratory)
 * [Kaggle](https://www.kaggle.com)
-## References
+
+## Theoretical References
+* A type of Neural Networks and the concepts
+    - https://untitledtblog.tistory.com/154
+
+## Practical References
 1) How to install tensorflow
     - ~~It is recommended that using docker, because tensorflow uses specific CPU instruction(ex. AVX)~~
         * The [LINK](https://www.tensorflow.org/install/docker) goes to tensorflow docs how to install it on docker.
