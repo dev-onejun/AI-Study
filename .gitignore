@@ -1,4 +1,5 @@
 node_modules/*
 venv/*
 
+.env
 tensorflow-2.10.0*
