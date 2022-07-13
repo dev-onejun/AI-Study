@@ -26,6 +26,6 @@ soup.select('#ve-list < li.black')
 * 정규조합식
 
 * 페이지에 링크된 자료까지 모두 받기(재귀 이용)
-    - [source code](./cr-getall.py)
+    - [source code](./ch1/cr-getall.py)
 
 
