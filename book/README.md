@@ -1,5 +1,6 @@
 # 파이썬을 이용한 머신러닝, 딥러닝 실전 개발 입문(개정판)
 * 쿠지라 히코우즈쿠에 지음, 윤인성 옮김, 위키북스 출판
+* [Github Link](https://github.com/wikibook/pyml-rev)
 * 다음의 컴퓨터 환경에서 소스코드를 실행했습니다.
 	- CPU		: Intel Pentium Gold G6405
 	- OS		: Ubuntu Server 22.04 LTS
