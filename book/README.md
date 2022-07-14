@@ -52,3 +52,24 @@ soup.select('#ve-list < li.black')
     - It can alert using email
 * Task Scheduler (Windows)
 
+## 3장, 데이터 소스의 서식과 가공
+### 데이터 형식
+* 텍스트 데이터와 바이너리 데이터
+
+* xml
+* json
+* yaml
+* csv/tsv
+
+#### openpyxl
+- 엑셀 파일을 읽고 쓰게 해주는 파이썬 라이브러리
+
+#### pandas
+
+### 데이터베이스
+* SQLite
+* MySQL
+* TinyDB
+
+
+
