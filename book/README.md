@@ -2,9 +2,12 @@
 * 쿠지라 히코우즈쿠에 지음, 윤인성 옮김, 위키북스 출판
 * [Github Link](https://github.com/wikibook/pyml-rev)
 * 다음의 컴퓨터 환경에서 소스코드를 실행했습니다.
-	- CPU		: Intel Pentium Gold G6405
+1)	- CPU		: Intel Pentium Gold G6405
 	- OS		: Ubuntu Server 22.04 LTS
 	- Python	: Version 3.8, venv
+2)	- CPU		: M1
+	- OS		: Mac
+	- Python	: Version 3.9, Conda Miniforge3
 
 ## 1장, 크롤링과 스크레이핑
 ### urllib.request
@@ -54,7 +57,7 @@ soup.select('#ve-list < li.black')
 
 ## 3장, 데이터 소스의 서식과 가공
 ### 데이터 형식
-* 텍스트 데이터와 바이너리 데이터
+- 텍스트 데이터와 바이너리 데이터
 
 * xml
 * json
@@ -71,5 +74,20 @@ soup.select('#ve-list < li.black')
 * MySQL
 * TinyDB
 
+## 4장, 머신러닝
+### 머신러닝의 응용분야
+1) Classification
+	- 분류
+2) Clustering
+	- 그룹 나누기
+3) Recommendation
+4) Regression
+	- 과거 데이터를 기반으로 미래 데이터 예측
+5) Dimensionality Reduction
+	- 데이터 축소
 
+### scikit-learn
+* scikit-learn, scipy, matplotlib, scikit-image, pandas
 
+#### [MNIST](http://yann.lecun.com/exdb/mnist/)
+- 손글씨 숫자 데이터 제공
