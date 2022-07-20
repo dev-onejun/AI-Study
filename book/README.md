@@ -5,9 +5,13 @@
 1)	- CPU		: Intel Pentium Gold G6405
 	- OS		: Ubuntu Server 22.04 LTS
 	- Python	: Version 3.8, venv
-2)	- CPU		: M1
+2)	- CPU		: Apple Silicon M1
 	- OS		: Mac
 	- Python	: Version 3.9, Conda Miniforge3
+3)	- CPU		: Intel i5-10400F
+	- GPU		: Nvidia GTX 1660ti
+	- OS		: Ubuntu Server 22.04 LTS
+	- Python	: Version 3.8, Docker(tensorflow/tensorflow:latest-gpu-jupyter)
 
 ## 1장, 크롤링과 스크레이핑
 ### urllib.request
@@ -86,8 +90,27 @@ soup.select('#ve-list < li.black')
 5) Dimensionality Reduction
 	- 데이터 축소
 
-### scikit-learn
-* scikit-learn, scipy, matplotlib, scikit-image, pandas
+### [scikit-learn](https://scikit-learn.org/stable/)
+- scikit-learn, scipy, matplotlib, scikit-image, pandas
 
 #### [MNIST](http://yann.lecun.com/exdb/mnist/)
 - 손글씨 숫자 데이터 제공
+
+#### SVM (Support Vector Machine)
+- 평면(공간?)에서 요소들을 구분하는 선을 찾고, 이를 기반으로 인풋값이 속하는 곳을 찾아 예측한다.
+
+* Scikit-learn은 세 가지 종류의 SVM을 제공한다.
+	1) SVC
+	2) NuSVC
+	3) LinearSVC
+
+#### 랜덤 포레스트
+- 집단 학습을 기반으로 고정밀 분류, 회귀, 클러스터링 등을 구현하는 것. 앙상블 기법 중 하나
+
+#### 교차 검증 (Cross-validation)
+* K 분할 교차 검증(K-fold cross validation)
+* scikit-learn이 제공하는 교차 검증 [code](./ch4/ch4-7.ipynb)
+
+#### 그리드 서치 (Grid Search)
+- 인공지능 알고리즘에 어떤 파라미터 값이 적정한 지 자동으로 조사해주는 방법
+* scikit-learn에서는 GridSearchCV()를 통해 제공 cf. [code](./ch4/ch4-7.ipynb)
