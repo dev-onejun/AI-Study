@@ -1,6 +1,7 @@
 node_modules/*
 venv/*
 mnist/*
+book_sample_codes/*
 
 .env
 tensorflow-2.10.0*
