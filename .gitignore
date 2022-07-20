@@ -1,6 +1,5 @@
-node_modules/*
-venv/*
-book_sample_codes/*
+node_modules/
+venv/
+book_sample_codes/
 
 .env
-tensorflow-2.10.0*
