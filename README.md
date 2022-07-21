@@ -31,3 +31,6 @@
 
 2) Kubeflow
     - https://www.kangwoo.kr/2020/03/04/kubeflow-%EC%86%8C%EA%B0%9C/
+
+3) jupyter-notebook
+    * [This](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html) is docs about docker jupyter images. After reading this, you can select docker images what you should use.
