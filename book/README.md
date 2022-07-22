@@ -114,3 +114,41 @@ soup.select('#ve-list < li.black')
 #### 그리드 서치 (Grid Search)
 - 인공지능 알고리즘에 어떤 파라미터 값이 적정한 지 자동으로 조사해주는 방법
 * scikit-learn에서는 GridSearchCV()를 통해 제공 cf. [code](./ch4/ch4-7.ipynb)
+
+## 5장, 딥러닝
+### [ImageNet](https://www.image-net.org)
+- 시각적 개체 인식 소프트웨어 연구에 사용하도록 설계된, 대규모 시각적 데이터베이스
+
+### 합성곱 신경망 (Convolutional Neural Network, CNN)
+- 입력층-(합성곱층-풀링층)-(전결합층)-출력층
+- 은폐층에 합성곱층과 풀링층이 번갈아가며 반복되는 구조이다.
+
+* 합성곱층
+	- 가중치 벡터(필터)를 이용해 특징맵(c)을 만든다.
+	- 필터의 종류는 다양한데, 대표적으로 평활화 (Equaliztion)과 윤곽선 검출 (Edge Detection)이 있다.
+* 풀링층
+	- 특징맵(c)의 크기를 축소한다.
+	- 최댓값을 사용하는 최대 풀링 (max pooling)과 평균값을 사용하는 평균 풀링 (average pooling)이 있다.
+
+#### 확률적 경사 강하법 (Stochastic Gradient Descent)
+- 무작위로 초기화한 매개변수를 손실 함수가 작아지도록 지속적으로 반복해서 변경하는 것
+- Tensorflow에서 모델 최적화 함수(Model Optimizer)로 'Adam'을 이용하는 것이, 이를 사용하는 것이다.
+
+### [Keras](https://keras.io)
+- Tensorflow는 고급 계산 프레임워크다.
+- Keras는 Theano와 Tensorflow를 wrapping한 라이브러리이다. Tensorflow만 사용할 때보다, 비교적 쉽게 코드 작성이 가능하다.
+
+* np_utils.to_categorical
+``` python
+# [5,1,9]와 같이 구성된 라벨 데이터를 [[0,0,0,0,0,1,0,0,0,0],[0,1,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,1]]와 같이 변경해주는 메서드
+from keras.utils import np_utils
+y_train = np_utils.to_categorical(y_train, 10)
+```
+
+* 배치 크기 (batch size)란?
+    - 머신러닝을 수행할 때는 굉장히 많은 양의 데이터를 사용하기 때문에, 뭔가 하나를 수정한다면 모든 데이터를 다시 처리해야 할 수도 있다.
+    - 따라서 훈련 데이터를 여러 개의 작은 배치로 나누어 매개변수를 수정하는데, 이를 배치 크기 (batch size) 또는 미니 배치 크기 (mini batch size)라고 한다.
+    
+### Pandas / Numpy [예시](./ch5/ch5-8.ipynb)
+* [NumPy 매뉴얼](http://docs.scipy.org/doc/numpy)
+* [Pandas 매뉴얼](http://pandas.pydata.org/pandas-docs/stable)
