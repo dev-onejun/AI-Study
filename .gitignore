@@ -3,3 +3,4 @@ venv/
 book_sample_codes/
 
 .env
+Check_Tensorflow_Installed_Well.ipynb
