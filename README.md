@@ -27,6 +27,7 @@
         - I can use docker images pushed on docker hub by tensorflow/tensorflow.
         - But building on docker didn't work properly, which means it couldn't detect gpus, I might seem that the reason is the different version of cuda and cuDNN which are installed on my host mahcine and docker container. I installed the cuda version, 11.7 and the container has the cuda version, 11.2.
         - So I think it will be fixed when I build sources locally, but because I can use docker images now, I have not tried yet.
+		* OR I experienced that when updating packages in container, tensorflow doesn't work properly which emits the same errors above. so before building sources on container, making packages update will be the same result with build locally. (It is a speculation, still ..)
         - Now I'm using .whl file built from container and install it to container, gpu-jupyter
 
 2) Kubeflow
