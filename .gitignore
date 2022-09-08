@@ -1,6 +1,8 @@
 node_modules/
 venv/
 book_sample_codes/
+no_github/
+.ipynb_checkpoints/
 
 .env
 Check_Tensorflow_Installed_Well.ipynb
