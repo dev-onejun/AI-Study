@@ -3,6 +3,10 @@ venv/
 book_sample_codes/
 no_github/
 .ipynb_checkpoints/
+__pycache__/
 
 .env
+.xlsx
+.csv
+
 Check_Tensorflow_Installed_Well.ipynb

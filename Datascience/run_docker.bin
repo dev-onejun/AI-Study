@@ -1,0 +1,2 @@
+sudo docker run -d --name datascience -p 8080:8888 -v /mnt/HDD/py_dev/ai_study/DataScience:/home/jovyan/work jupyter/scipy-notebook:python-3.8.8 &&\
+sudo docker run -d --name datascience -v /mnt/HDD/py_dev/ai_study/DataScience:/mnt -it python:3.7.14-buster bash
