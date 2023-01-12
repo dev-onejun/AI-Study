@@ -4,10 +4,10 @@ book_sample_codes/
 no_github/
 .ipynb_checkpoints/
 __pycache__/
+data/
 
 .env
 .xlsx
-.csv
 
 Check_Tensorflow_Installed_Well.ipynb
 db_conn.py

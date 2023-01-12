@@ -1,7 +1,0 @@
-sudo docker run -d --restart unless-stopped --name tensorflow_jupyter -v ~/ai_study:/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-jupyter \
-
-sudo docker run -d -u $(id -u):$(id -g) ... ?
-sudo docker run --gpus all -d --restart unless-stopped --name tensorflow_jupyter -v /mnt/HDD/py_dev:/tf/notebooks -p 8888:8888 -p 6006:6006 tensorflow_jupyter:22.07.20 \
-
-
-sudo docker commit <current_container_id_or_name> <new_image_name>
