@@ -11,7 +11,7 @@ def preprocess(data):
     Sex = [1 if x == 'female' else 0 for x in Sex]
     Sex = pd.DataFrame({'Sex': Sex})
 
-    cols_to_use = ['Pclass']
+    cols_to_use = ['Pclass', 'SibSp', 'Parch']
     X = pd.concat([data[cols_to_use], Sex], axis=1)
 
     try:
