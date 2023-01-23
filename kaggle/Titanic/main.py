@@ -3,6 +3,7 @@ import numpy as np
 
 #from xgboost import XGBClassifier
 import tensorflow as tf
+#from sklearn.ensemble import RandomForestClassifier
 
 def getData(filepath='./data/train.csv'):
     data = pd.read_csv(filepath)
@@ -13,12 +14,21 @@ def preprocess(data):
     Sex = [1 if x == 'female' else 0 for x in Sex]
     Sex = pd.DataFrame({'Sex': Sex})
 
-    cols_to_use = ['Pclass', 'SibSp', 'Parch']
+    """
+    import math
+    Age = data['Age']
+    Age = [ Age.mean() if math.isnan(x) else x for x in Age]
+    Age = pd.DataFrame({'Age': Age})
+    """
+
+    cols_to_use = ['Pclass', 'SibSp', 'Parch', 'Fare']
     X = pd.concat([data[cols_to_use], Sex], axis=1)
+    #X = pd.concat([data[cols_to_use], Age], axis=1)
+    #X = pd.get_dummies(X)
 
     try:
         y = data.Survived
-    except:
+    except: # ignore that test data don't have Survived columns
         y = -1
 
     X = np.array(X)
@@ -50,12 +60,18 @@ def fitMLP(X, y):
 
     return model
 
+def fitRandomForest(X, y):
+    forest = RandomForestClassifier()
+    forest.fit(X, y)
+
+    return forest
+
 def makeSubmissionFile(model):
     data = pd.read_csv('./data/test.csv')
     X_test, dummies = preprocess(data)
 
     predictions = model.predict(X_test)
-    predictions = [ 1 if x >= 0.5 else 0 for x in predictions]
+    #predictions = [ 1 if x >= 0.5 else 0 for x in predictions]
 
     output = pd.DataFrame({'PassengerId': data.PassengerId, 'Survived': predictions})
     output.to_csv('submission.csv', index=False)
@@ -67,5 +83,6 @@ if __name__=='__main__':
 
     #model = fitXGBoost(X, y)
     model = fitMLP(X, y)
+    #model = fitRandomForest(X, y)
 
     makeSubmissionFile(model)
