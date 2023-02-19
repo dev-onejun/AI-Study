@@ -8,6 +8,7 @@ data/
 
 .env
 .xlsx
+*.hdf5
 
 Check_Tensorflow_Installed_Well.ipynb
 db_conn.py
