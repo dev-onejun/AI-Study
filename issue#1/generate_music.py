@@ -1,6 +1,8 @@
 import numpy as np
+from numpy._typing import NDArray
+from typing import Any
 
-def random_seed_to_generate_music():
+def random_seed_to_generate_music() -> NDArray[Any]:
     from train import network_input
 
     start = np.random.randint(0, len(network_input) - 1)
@@ -42,12 +44,12 @@ def decode_to_music(prediction_output):
 def generate_music(model, music_length=500):
 
     # Load the weights to each node
-    model.load_weights('weights.hd5f')
+    model.load_weights('model-129-0.5906.hdf5')
+
+    from train import notes, n_vocab
 
     # Make random start point (or you can make your own start points with the same length of `sequence_length` (100) )
     pattern = random_seed_to_generate_music()
-
-    from train import notes, n_vocab
 
     pitch_names = sorted(set(notes))
     int_to_note = dict( (number, note) for number, note in enumerate(pitch_names) )
@@ -61,9 +63,9 @@ def generate_music(model, music_length=500):
 
         index = np.argmax(prediction)
         result = int_to_note[index]
-        prediction_output.append(result)
+        prediction_output = np.append(prediction_output, result)
 
-        pattern.append(index)
+        pattern = np.append(pattern, index)
         pattern = pattern[1:len(pattern)]
 
     music = decode_to_music(prediction_output)

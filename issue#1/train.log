@@ -1,0 +1,463 @@
+2023-02-19 14:19:51.051844: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow
+ binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU i
+nstructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-02-19 14:19:51.553424: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loade
+r.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open
+ shared object file: No such file or directory; LD_LIBRARY_PATH: :/mnt/HDD/py_dev/miniconda3/env
+s/tensorflow/lib/
+2023-02-19 14:19:51.553521: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loade
+r.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.
+7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: :/mnt/HDD/py_dev/
+miniconda3/envs/tensorflow/lib/
+2023-02-19 14:19:51.553528: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warni
+ng: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, pl
+ease make sure the missing libraries mentioned above are installed properly.
+2023-02-19 14:19:52.050465: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:
+981] successful NUMA node read from SysFS had negative value (-1), but there must be at least on
+e NUMA node, so returning NUMA node zero
+2023-02-19 14:19:52.074467: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:
+981] successful NUMA node read from SysFS had negative value (-1), but there must be at least on
+e NUMA node, so returning NUMA node zero
+2023-02-19 14:19:52.074685: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:
+981] successful NUMA node read from SysFS had negative value (-1), but there must be at least on
+e NUMA node, so returning NUMA node zero
+2023-02-19 14:19:52.074993: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow
+ binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU i
+nstructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-02-19 14:19:52.075520: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:
+981] successful NUMA node read from SysFS had negative value (-1), but there must be at least on
+e NUMA node, so returning NUMA node zero
+2023-02-19 14:19:52.075647: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:
+981] successful NUMA node read from SysFS had negative value (-1), but there must be at least on
+e NUMA node, so returning NUMA node zero
+2023-02-19 14:19:52.075757: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:
+981] successful NUMA node read from SysFS had negative value (-1), but there must be at least on
+e NUMA node, so returning NUMA node zero
+2023-02-19 14:19:52.466878: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:
+981] successful NUMA node read from SysFS had negative value (-1), but there must be at least on
+e NUMA node, so returning NUMA node zero
+2023-02-19 14:19:52.467093: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:
+981] successful NUMA node read from SysFS had negative value (-1), but there must be at least on
+e NUMA node, so returning NUMA node zero
+2023-02-19 14:19:52.467246: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:
+981] successful NUMA node read from SysFS had negative value (-1), but there must be at least on
+e NUMA node, so returning NUMA node zero
+2023-02-19 14:19:52.467359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created dev
+ice /job:localhost/replica:0/task:0/device:GPU:0 with 4622 MB memory:  -> device: 0, name: NVIDI
+A GeForce GTX 1660 Ti, pci bus id: 0000:01:00.0, compute capability: 7.5
+2023-02-19 14:19:53.152599: W tensorflow/tsl/framework/cpu_allocator_impl.cc:82] Allocation of 5
+9817088 exceeds 10% of free system memory.
+2023-02-19 14:19:53.228670: W tensorflow/tsl/framework/cpu_allocator_impl.cc:82] Allocation of 5
+9817088 exceeds 10% of free system memory.
+Epoch 1/200
+2023-02-19 14:19:59.300767: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:428] Load
+ed cuDNN version 8100
+2023-02-19 14:20:04.765644: I tensorflow/compiler/xla/service/service.cc:173] XLA service 0x7fe9
+ffa63e80 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2023-02-19 14:20:04.765664: I tensorflow/compiler/xla/service/service.cc:181]   StreamExecutor d
+evice (0): NVIDIA GeForce GTX 1660 Ti, Compute Capability 7.5
+2023-02-19 14:20:05.026360: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] d
+isabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2023-02-19 14:20:06.744386: I tensorflow/compiler/jit/xla_compilation_cache.cc:477] Compiled clu
+ster using XLA!  This line is logged at most once for the lifetime of the process.
+717/717 [==============================] - 44s 42ms/step - loss: 4.6243
+Epoch 2/200
+717/717 [==============================] - 30s 42ms/step - loss: 4.5156
+Epoch 3/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.4876
+Epoch 4/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.4629
+Epoch 5/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.4238
+Epoch 6/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.3851
+Epoch 7/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.3357
+Epoch 8/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.2822
+Epoch 9/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.2127
+Epoch 10/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.1262
+Epoch 11/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.0354
+Epoch 12/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.9367
+Epoch 13/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.8184
+Epoch 14/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.7089
+Epoch 15/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.5914
+Epoch 16/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.4675
+Epoch 17/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.3552
+Epoch 18/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.2529
+Epoch 19/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.1629
+Epoch 20/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.0748
+Epoch 21/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.9936
+Epoch 22/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.8983
+Epoch 23/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.8151
+Epoch 24/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.7354
+Epoch 25/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.6687
+Epoch 26/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.6068
+Epoch 27/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.5329
+Epoch 28/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.4671
+Epoch 29/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.3998
+Epoch 30/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.3300
+Epoch 31/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.2637
+Epoch 32/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.2014
+Epoch 33/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.1345
+Epoch 34/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.0864
+Epoch 35/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.0327
+Epoch 36/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.9773
+Epoch 37/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.9190
+Epoch 38/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.8739
+Epoch 39/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.8329
+Epoch 40/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.7875
+Epoch 41/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.7351
+Epoch 42/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.6953
+Epoch 43/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.6410
+Epoch 44/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.6025
+Epoch 45/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.5547
+Epoch 46/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.5167
+Epoch 47/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.4829
+Epoch 48/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.4333
+Epoch 49/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.3992
+Epoch 50/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.3716
+Epoch 51/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.3506
+Epoch 52/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.3274
+Epoch 53/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.2851
+Epoch 54/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.2549
+Epoch 55/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.2213
+Epoch 56/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.1969
+Epoch 57/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.1568
+Epoch 58/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.1332
+Epoch 59/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.1223
+Epoch 60/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.0783
+Epoch 61/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.0661
+Epoch 62/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.0469
+Epoch 63/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.0251
+Epoch 64/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.0058
+Epoch 65/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9906
+Epoch 66/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9662
+Epoch 67/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9468
+Epoch 68/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9236
+Epoch 69/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9105
+Epoch 70/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.8893
+Epoch 71/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.8687
+Epoch 72/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.8483
+Epoch 73/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.8392
+Epoch 74/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.8192
+Epoch 75/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.8198
+Epoch 76/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.8071
+Epoch 77/200
+717/717 [==============================] - 31s 44ms/step - loss: 0.7923
+Epoch 78/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7684
+Epoch 79/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7673
+Epoch 80/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7522
+Epoch 81/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7541
+Epoch 82/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7506
+Epoch 83/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7536
+Epoch 84/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7598
+Epoch 85/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7589
+Epoch 86/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7284
+Epoch 87/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7186
+Epoch 88/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7285
+Epoch 89/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6961
+Epoch 90/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6922
+Epoch 91/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6958
+Epoch 92/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6816
+Epoch 93/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6770
+Epoch 94/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6729
+Epoch 95/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6872
+Epoch 96/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6781
+Epoch 97/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6633
+Epoch 98/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6487
+Epoch 99/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6725
+Epoch 100/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6712
+Epoch 101/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6657
+Epoch 102/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6492
+Epoch 103/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6440
+Epoch 104/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6213
+Epoch 105/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6248
+Epoch 106/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6197
+Epoch 107/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6171
+Epoch 108/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6236
+Epoch 109/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6376
+Epoch 110/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6550
+Epoch 111/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6684
+Epoch 112/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6454
+Epoch 113/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6200
+Epoch 114/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6156
+Epoch 115/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6263
+Epoch 116/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6184
+Epoch 117/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6305
+Epoch 118/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6593
+Epoch 119/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6799
+Epoch 120/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6290
+Epoch 121/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6278
+Epoch 122/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6103
+Epoch 123/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6100
+Epoch 124/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6210
+Epoch 125/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6240
+Epoch 126/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6451
+Epoch 127/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6127
+Epoch 128/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.5942
+Epoch 129/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.5906
+Epoch 130/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.5935
+Epoch 131/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6455
+Epoch 132/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6355
+Epoch 133/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6206
+Epoch 134/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6270
+Epoch 135/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.6493
+Epoch 136/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.7332
+Epoch 137/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9359
+Epoch 138/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9575
+Epoch 139/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9194
+Epoch 140/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9114
+Epoch 141/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.8807
+Epoch 142/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.8941
+Epoch 143/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.0442
+Epoch 144/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9946
+Epoch 145/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.1479
+Epoch 146/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.1183
+Epoch 147/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.1276
+Epoch 148/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.0836
+Epoch 149/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9918
+Epoch 150/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9758
+Epoch 151/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9474
+Epoch 152/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9437
+Epoch 153/200
+717/717 [==============================] - 31s 43ms/step - loss: 0.9785
+Epoch 154/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.0291
+Epoch 155/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.1473
+Epoch 156/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.3100
+Epoch 157/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.2124
+Epoch 158/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.2322
+Epoch 159/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.2573
+Epoch 160/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.3233
+Epoch 161/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.3644
+Epoch 162/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.3431
+Epoch 163/200
+717/717 [==============================] - 31s 43ms/step - loss: 1.7518
+Epoch 164/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.3628
+Epoch 165/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.9017
+Epoch 166/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.0029
+Epoch 167/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.6083
+Epoch 168/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.6969
+Epoch 169/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.4097
+Epoch 170/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.7635
+Epoch 171/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.4012
+Epoch 172/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.5088
+Epoch 173/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.3483
+Epoch 174/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.3018
+Epoch 175/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.1742
+Epoch 176/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.8038
+Epoch 177/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.5370
+Epoch 178/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.6089
+Epoch 179/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.5056
+Epoch 180/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.5763
+Epoch 181/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.3833
+Epoch 182/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.1994
+Epoch 183/200
+717/717 [==============================] - 31s 43ms/step - loss: 4.0507
+Epoch 184/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.8780
+Epoch 185/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.7072
+Epoch 186/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.5613
+Epoch 187/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.4226
+Epoch 188/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.2906
+Epoch 189/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.1801
+Epoch 190/200
+717/717 [==============================] - 31s 43ms/step - loss: 3.0558
+Epoch 191/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.9501
+Epoch 192/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.8449
+Epoch 193/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.7419
+Epoch 194/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.6435
+Epoch 195/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.5548
+Epoch 196/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.4635
+Epoch 197/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.3764
+Epoch 198/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.2941
+Epoch 199/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.2162
+Epoch 200/200
+717/717 [==============================] - 31s 43ms/step - loss: 2.1380
