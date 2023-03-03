@@ -4,6 +4,7 @@ import numpy as np
 #from xgboost import XGBClassifier
 import tensorflow as tf
 #from sklearn.ensemble import RandomForestClassifier
+#from supervised.automl import AutoML
 
 def getData(filepath='./data/train.csv'):
     data = pd.read_csv(filepath)
@@ -21,7 +22,7 @@ def preprocess(data):
     Age = pd.DataFrame({'Age': Age})
     """
 
-    cols_to_use = ['Pclass', 'SibSp', 'Parch', 'Fare']
+    cols_to_use = ['Pclass', 'SibSp', 'Parch']
     X = pd.concat([data[cols_to_use], Sex], axis=1)
     #X = pd.concat([data[cols_to_use], Age], axis=1)
     #X = pd.get_dummies(X)
@@ -45,20 +46,27 @@ def fitXGBoost(X, y):
     return bst
 
 def fitMLP(X, y):
-
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(4),
-        tf.keras.layers.Dense(8, activation='relu'),
-        tf.keras.layers.Dense(8, activation='relu'),
-        tf.keras.layers.Dense(8, activation='relu'),
+        tf.keras.layers.Dense(6, activation='relu'),
+        tf.keras.layers.Dense(6, activation='relu'),
+        tf.keras.layers.Dense(4, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid'),
     ])
 
     model.compile(loss='binary_crossentropy', optimizer='adam')
 
-    model.fit(X, y, epochs=500)
+    from keras.callbacks import ModelCheckpoint
 
-    return model
+    check_point = ModelCheckpoint(
+        filepath = 'model/model-{epoch:02d}-{loss:.4f}.hdf5',
+        monitor='loss',
+        save_best_only=True,
+        mode='min'
+    )
+    callbacks_list = [check_point]
+
+    model.fit(X, y, epochs=1000, callbacks=callbacks_list)
 
 def fitRandomForest(X, y):
     forest = RandomForestClassifier()
@@ -66,12 +74,30 @@ def fitRandomForest(X, y):
 
     return forest
 
+def fitAutoML(X, y):
+    model = AutoML()
+    model.fit(X, y)
+
+    return model
+
 def makeSubmissionFile(model):
     data = pd.read_csv('./data/test.csv')
     X_test, dummies = preprocess(data)
 
+    model = tf.keras.Sequential([
+        tf.keras.layers.Dense(4),
+        tf.keras.layers.Dense(6, activation='relu'),
+        tf.keras.layers.Dense(6, activation='relu'),
+        tf.keras.layers.Dense(4, activation='relu'),
+        tf.keras.layers.Dense(1, activation='sigmoid'),
+    ])
+
+    model.compile(loss='binary_crossentropy', optimizer='adam')
+    model.build( (4,4) )
+    model.load_weights('model/model-985-0.4083.hdf5')
+
     predictions = model.predict(X_test)
-    #predictions = [ 1 if x >= 0.5 else 0 for x in predictions]
+    predictions = [ 1 if x >= 0.5 else 0 for x in predictions]
 
     output = pd.DataFrame({'PassengerId': data.PassengerId, 'Survived': predictions})
     output.to_csv('submission.csv', index=False)
@@ -82,7 +108,8 @@ if __name__=='__main__':
     X, y = preprocess(data)
 
     #model = fitXGBoost(X, y)
-    model = fitMLP(X, y)
+    #model = fitMLP(X, y)
     #model = fitRandomForest(X, y)
+    #model = fitAutoML(X, y)
 
-    makeSubmissionFile(model)
+    makeSubmissionFile(None)
